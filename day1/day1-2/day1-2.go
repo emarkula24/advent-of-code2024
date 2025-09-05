@@ -12,7 +12,7 @@ import (
 
 func main() {
 	start := time.Now()
-	file, _ := ParseFile("../day1-input")
+	file := ParseFile("../day1-input")
 	defer file.Close()
 
 	var listLeft, listRight []int

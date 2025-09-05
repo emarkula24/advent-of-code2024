@@ -10,11 +10,8 @@ func Check(e error) {
 	}
 }
 
-func ParseFile(filename string) (*os.File, []byte) {
-	data, err := os.ReadFile(filename)
-	Check(err)
-
+func ParseFile(filename string) *os.File {
 	f, err := os.Open(filename)
 	Check(err)
-	return f, data
+	return f
 }
