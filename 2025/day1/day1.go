@@ -1,4 +1,4 @@
-package main
+package day1
 
 import (
 	"bufio"
@@ -30,6 +30,9 @@ func part2(instructions []string) {
 			next += numberInt
 			if next > 99 {
 				for next > 99 {
+					if next == 99 {
+						continue
+					}
 					next -= 100
 					count += 1
 				}
@@ -51,6 +54,9 @@ func part2(instructions []string) {
 
 			if next < 0 {
 				for next < 0 {
+					if next == 0 {
+						continue
+					}
 					next += 100
 					count++
 				}
